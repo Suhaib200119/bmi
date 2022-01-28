@@ -13,17 +13,15 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   int age = 12;
   int weight = 45;
-  double valueSlider=80;
+  double valueSlider = 80;
 
-  Color mealColor=Colors.white;
-  double mealFontSize=25;
+  Color mealColor = Colors.white;
+  double mealFontSize = 25;
 
-  Color femealColor=Colors.white;
-  double femealFontSize=25;
+  Color femealColor = Colors.white;
+  double femealFontSize = 25;
 
-  late bool isMale=true;
-
-
+  late bool isMale = true;
 
   @override
   Widget build(BuildContext context) {
@@ -45,18 +43,18 @@ class _HomeScreenState extends State<HomeScreen> {
                   child: Container(
                     margin: EdgeInsetsDirectional.fromSTEB(20, 15, 0, 0),
                     decoration: BoxDecoration(
-                      color: Color.fromRGBO(52, 73, 94 , 0.3),
+                      color: Color.fromRGBO(52, 73, 94, 0.3),
                       borderRadius: BorderRadius.circular(5),
                     ),
                     child: MaterialButton(
-                      onPressed: (){
+                      onPressed: () {
                         setState(() {
-                          mealColor=Colors.blue;
-                          mealFontSize=30;
+                          mealColor = Colors.blue;
+                          mealFontSize = 30;
 
-                          femealColor=Colors.white;
-                          femealFontSize=25;
-                          isMale=true;
+                          femealColor = Colors.white;
+                          femealFontSize = 25;
+                          isMale = true;
                         });
                       },
                       child: Column(
@@ -73,9 +71,9 @@ class _HomeScreenState extends State<HomeScreen> {
                           Text(
                             "MEAL",
                             style: TextStyle(
-                                fontSize: mealFontSize,
-                                fontWeight: FontWeight.bold,
-                                color: mealColor,
+                              fontSize: mealFontSize,
+                              fontWeight: FontWeight.bold,
+                              color: mealColor,
                             ),
                           ),
                         ],
@@ -90,20 +88,19 @@ class _HomeScreenState extends State<HomeScreen> {
                   child: Container(
                     margin: EdgeInsetsDirectional.fromSTEB(0, 15, 20, 0),
                     decoration: BoxDecoration(
-                      color: Color.fromRGBO(52, 73, 94 , 0.3),
+                      color: Color.fromRGBO(52, 73, 94, 0.3),
                       borderRadius: BorderRadius.circular(5),
                     ),
                     child: MaterialButton(
-                      onPressed: (){
+                      onPressed: () {
                         setState(() {
-                          femealColor=Colors.blue;
-                          femealFontSize=30;
+                          femealColor = Colors.blue;
+                          femealFontSize = 30;
 
-                          mealColor=Colors.white;
-                          mealFontSize=25;
+                          mealColor = Colors.white;
+                          mealFontSize = 25;
 
-                          isMale=false;
-
+                          isMale = false;
                         });
                       },
                       child: Column(
@@ -120,9 +117,9 @@ class _HomeScreenState extends State<HomeScreen> {
                           Text(
                             "FEMEAL",
                             style: TextStyle(
-                                fontSize: femealFontSize,
-                                fontWeight: FontWeight.bold,
-                                color: femealColor,
+                              fontSize: femealFontSize,
+                              fontWeight: FontWeight.bold,
+                              color: femealColor,
                             ),
                           ),
                         ],
@@ -141,7 +138,7 @@ class _HomeScreenState extends State<HomeScreen> {
               margin: EdgeInsetsDirectional.fromSTEB(20, 0, 20, 0),
               width: double.infinity,
               decoration: BoxDecoration(
-                color: Color.fromRGBO(52, 73, 94 , 0.3),
+                color: Color.fromRGBO(52, 73, 94, 0.3),
                 borderRadius: BorderRadius.circular(10),
               ),
               child: Column(
@@ -176,12 +173,11 @@ class _HomeScreenState extends State<HomeScreen> {
                       max: 210,
                       value: valueSlider,
                       onChanged: (value) {
-                          setState(() {
-                            valueSlider=value;
-                          });
-                          // print("value: ${valueSlider.round()}");
-                      }
-                      ),
+                        setState(() {
+                          valueSlider = value;
+                        });
+                        // print("value: ${valueSlider.round()}");
+                      }),
                 ],
               ),
             ),
@@ -197,7 +193,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   child: Container(
                     margin: EdgeInsetsDirectional.fromSTEB(20, 0, 0, 0),
                     decoration: BoxDecoration(
-                      color: Color.fromRGBO(52, 73, 94 , 0.3),
+                      color: Color.fromRGBO(52, 73, 94, 0.3),
                       borderRadius: BorderRadius.circular(5),
                     ),
                     child: Column(
@@ -221,7 +217,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           mainAxisSize: MainAxisSize.min,
                           children: [
                             FloatingActionButton(
-                              heroTag: "weight--",
+                                heroTag: "weight--",
                                 backgroundColor: Colors.grey.withOpacity(0.3),
                                 child: Text(
                                   "-",
@@ -239,7 +235,7 @@ class _HomeScreenState extends State<HomeScreen> {
                               width: 10,
                             ),
                             FloatingActionButton(
-                              heroTag: "weight++",
+                                heroTag: "weight++",
                                 backgroundColor: Colors.grey.withOpacity(0.3),
                                 child: Text(
                                   "+",
@@ -266,7 +262,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   child: Container(
                     margin: EdgeInsetsDirectional.fromSTEB(0, 0, 20, 0),
                     decoration: BoxDecoration(
-                      color: Color.fromRGBO(52, 73, 94 , 0.3),
+                      color: Color.fromRGBO(52, 73, 94, 0.3),
                       borderRadius: BorderRadius.circular(5),
                     ),
                     child: Column(
@@ -290,7 +286,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           mainAxisSize: MainAxisSize.min,
                           children: [
                             FloatingActionButton(
-                              heroTag: "age--",
+                                heroTag: "age--",
                                 backgroundColor: Colors.grey.withOpacity(0.3),
                                 child: Text(
                                   "-",
@@ -308,7 +304,7 @@ class _HomeScreenState extends State<HomeScreen> {
                               width: 10,
                             ),
                             FloatingActionButton(
-                              heroTag: "age++",
+                                heroTag: "age++",
                                 backgroundColor: Colors.grey.withOpacity(0.3),
                                 child: Text(
                                   "+",
@@ -350,16 +346,14 @@ class _HomeScreenState extends State<HomeScreen> {
                 style: TextStyle(color: Colors.white, fontSize: 22),
               ),
               onPressed: () {
-                int height=valueSlider.round();
-                var result=weight/pow(height/100, 2);
-                int newResult=result.round();
+                int height = valueSlider.round();
+                var result = weight / pow(height / 100, 2);
+                int newResult = result.round();
                 Navigator.push(
                   context,
-                  MaterialPageRoute(
-                      builder: (contextPage2){
-                       return Bmi_Result_Screen(isMale,newResult,age);
-                      }
-                  ),
+                  MaterialPageRoute(builder: (contextPage2) {
+                    return Bmi_Result_Screen(isMale, newResult, age);
+                  }),
                 );
               },
             ),
